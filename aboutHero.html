@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Solo Superhero Page</title>
+
+    <link rel="icon" href="images/superhero.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/aboutHero.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/b85ff28d5a.js" crossorigin="anonymous"></script>
+    <script src="./scripts/aboutHero.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Setting everything in the main body to center using bootstrap classes-->
+    <div class="justify-content-center flex-wrap d-flex text-center">
+        <!-- Common Header top for all pages -->
+        <div id="common-header-top">
+            <span> <a href="index.html"> Return to <i class="fas fa-home fa-2x fa-flip"
+                        style="--fa-animation-duration: 2.5s;"></i> Page</a> </span>
+        </div>
+
+        <!-- Main Heading -->
+        <div id="heading" class="row justify-content-center flex-wrap d-flex text-center HeadingShadowEffect text-wrap">
+            Bio & Powers They Acquire :)
+        </div>
+
+        <!-- Every information about the hero -->
+        <div class="container d-flex row justify-content-between text-center mt-5">
+            <div class="row m-1">
+                <!-- Hero Image and telling if he's good or bad -->
+                <div class="col">
+                    <img id="heroImage" class="m-1 d-table-row" src="" alt=" Fetching SuperHero Image :D">
+                    <img id="GoodOrBad" class="m-1 d-table-row" src="" alt="image GoodOrBad">
+                </div>
+
+                <!-- Hero Biography (Appearance) container -->
+                <div id="appearance"
+                    class="BioHeading col justify-content-evenly flex-wrap d-flex text-center YellowRedPinkBG m-2">
+
+                    <div id="gender" class="col">
+                        <span id="genderOfPerticularHero"> </span></span>
+                    </div>
+                    <div id="race" class="col">
+                        <span id="raceOfPerticularHero"> </span></span>
+                    </div>
+                    <div id="height" class="col">
+                        <span id="heightOfPerticularHero"> </span></span>
+                    </div>
+                    <div id="weight" class="col">
+                        <span id="weightOfPerticularHero"> </span></span>
+                    </div>
+                    <div id="eyeColor" class="col">
+                        <span id="eyeColorOfPerticularHero"> </span></span>
+                    </div>
+                    <div id="hairColor" class="col">
+                        <span id="hairColorOfPerticularHero"> </span></span>
+                    </div>
+                </div>
+
+                <!-- Hero Powers Container -->
+                <div id="powerstats"
+                    class="BioHeading col d-flex YellowRedPinkBG justify-content-between flex-wrap text-center m-1">
+                    <div id="combat" class="col">
+                        <span id="combatOfPerticularHero"> </span>
+                    </div>
+                    <div id="durability" class="col">
+                        <span id="durabilityOfPerticularHero"> </span>
+                    </div>
+                    <div id="intelligence" class="col">
+                        <span id="intelligenceOfPerticularHero"> </span>
+                    </div>
+
+                    <div id="power" class="col">
+                        <span id="powerOfPerticularHero"> </span>
+                    </div>
+                    <div id="speed" class="col">
+                        <span id="speedOfPerticularHero"> </span>
+                    </div>
+                    <div id="strength" class="col">
+                        <span id="strengthOfPerticularHero"> </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Name of the super hero the we clicked on-->
+            <div
+                class="minWidth-200 row flex-wrap d-flex BioHeading mt-2 greenWhiteGreen text-center justify-content-center m-1 ">
+                <span><span id="SuperHeroNameContainer"> SuperHeroName: </span> <span class="BioContent"
+                        id="SuperHeroName">
+                        name
+
+                    </span> </span>
+                <span class="mt-1" id="RealNameContainer"> RealName: <span class="BioContent" id="RealName"> name
+                    </span></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
