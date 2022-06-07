@@ -52,6 +52,7 @@ function heroSearchPlaceholderKeyUpRefresh () {
     if (this.readyState == 4 && this.status == 200) {
       //responseText returns the text received from a server
       var requiredData = JSON.parse(this.responseText)
+      console.log('requiredData:', requiredData)
 
       //Handling error either if hero doesn't exist in database or if nothing is entered in search placeholder or pressed the backspace in the start of search
       if (requiredData.response === 'error') {
@@ -82,6 +83,7 @@ function heroSearchPlaceholderKeyUpRefresh () {
         //Show current hero details whenever we click on that hero
         thisHeroContainer.onclick = function () {
           localStorage.setItem('RedirectToThisHeroPage', thisHero.id)
+          // console.log('getHero', localStorage.getItem('RedirectToThisHeroPage'))
           document.getElementById('heroSearchPlaceholder').value = ''
           window.location.assign('aboutHero.html')
         }
@@ -173,7 +175,7 @@ function LikeDislikeToggle (event, thisHeroID, thisHeroFavouriteButton) {
   // console.log(thisHeroID)
   //Dislike button will work if hero is already liked and vice versa
   if (likedRequiredData.includes(thisHeroID)) {
-    // console.log('dislike')
+    console.log('Dislike')
     // thisHeroFavouriteButton.addEventListener('mouseover', mOver, false)
     // thisHeroFavouriteButton.addEventListener('mouseout', mOut, false)
     // circle.classList.add('margin-left-95Percent')
@@ -181,7 +183,7 @@ function LikeDislikeToggle (event, thisHeroID, thisHeroFavouriteButton) {
     thisHeroFavouriteButton.innerHTML = `<span class="LeftEnd"> <i class="fa-regular fa-heart"  style="transition-duration: 1s;"></i> </span>`
     deleteThisHeroFromFavourites(event, thisHeroID, likedRequiredData)
   } else {
-    // console.log('like')
+    console.log('Like')
     // thisHeroFavouriteButton.removeEventListener('mouseover', mOver, false)
     // thisHeroFavouriteButton.removeEventListener('mouseout', mOut, false)
     // circle.classList.remove('margin-left-95Percent')
@@ -201,6 +203,7 @@ function LikeDislikeToggle (event, thisHeroID, thisHeroFavouriteButton) {
 //Function to delete hero from our favourites
 function deleteThisHeroFromFavourites (event, DeleteThisHeroID, likedHeros) {
   // console.log('event:', event, 'ID', DeleteThisHeroID, 'likedHeros', likedHeros)
+  console.log('deleteThisHeroFromFavourites')
 
   //Deleting from array list
   for (let heroID in likedHeros) {

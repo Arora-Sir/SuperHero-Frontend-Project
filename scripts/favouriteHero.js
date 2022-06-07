@@ -2,6 +2,7 @@
 var likedHeros = JSON.parse(localStorage.getItem('likedHerosUniqueID'))
 //Adding container to place all favourite cards in it
 let FavouriteCardsContainer = document.getElementById('FavouriteCards')
+var heroCounting = 1
 
 for (let thisHeroUniqueID of likedHeros) {
   var thisHeroUniqueURL =
@@ -16,11 +17,12 @@ for (let thisHeroUniqueID of likedHeros) {
     if (this.readyState == 4 && this.status == 200) {
       //responseText returns the text received from a server
       var thisHero = JSON.parse(this.responseText)
+      console.log('Hero', heroCounting++, thisHero)
 
       //Creating HTML element for hero card container
       let thisHeroContainer = document.createElement('div')
       //Adding particular Hero ID card from bootstrap
-      thisHeroContainer.id = 'favourite-hero-card' + thisHeroUniqueID
+      thisHeroContainer.id = thisHeroUniqueID
       //Adding class name card from bootstrap
       thisHeroContainer.className += 'card'
       //Adding class name card from favourites.css
@@ -31,7 +33,11 @@ for (let thisHeroUniqueID of likedHeros) {
 
       //Show current hero details whenever we click on that hero
       thisHeroContainer.onclick = function () {
-        localStorage.setItem('RedirectToThisHeroPage', thisHeroUniqueID.id)
+        localStorage.setItem('RedirectToThisHeroPage', thisHeroUniqueID)
+        // console.log(
+        //   'getFavHero',
+        //   localStorage.getItem('RedirectToThisHeroPage')
+        // )
         window.location.assign('aboutHero.html')
       }
 
@@ -103,6 +109,7 @@ function deleteThisHeroFromFavourites (
   thisHeroContainer
 ) {
   // console.log('event:', event, 'ID', DeleteThisHeroID, 'likedHeros', likedHeros)
+  console.log('deleteThisHeroFromFavourites')
 
   //Deleting from array list
   for (let heroID in likedHeros) {

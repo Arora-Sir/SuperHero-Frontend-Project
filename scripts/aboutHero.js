@@ -3,6 +3,7 @@ var xhr = new XMLHttpRequest()
 
 //Getting Hero Unique ID from local storage
 let thisHeroUniqueID = localStorage.getItem('RedirectToThisHeroPage')
+console.log('HeroUniqueID:', thisHeroUniqueID)
 
 //Getting Hero Unique URL from local storage
 var thisHeroUniqueURL =
@@ -12,10 +13,12 @@ var thisHeroUniqueURL =
 xhr.onreadystatechange = function () {
   //xhr.readyState = 4, when onLoad is Done
   //status code = 200, when request has succeeded
+
   if (this.readyState == 4 && this.status == 200) {
     //responseText returns the text received from a server
     var requiredData = JSON.parse(this.responseText)
-    console.log(requiredData)
+    console.log('AboutThisHero:', requiredData)
+
     //Hero image from the server
     let HeroImage = document.getElementById('heroImage')
     HeroImage.setAttribute('src', requiredData.image.url)
