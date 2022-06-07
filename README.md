@@ -11,7 +11,7 @@ This is a SuperHero Hunter project meant to search your favourite heros :D
 
 # Important links
 - Hosting Link: https://arora-sir.github.io/SuperHero-Frontend-Project/
-- Explanation Link: 
+- Explanation Link: https://user-images.githubusercontent.com/29508236/172479633-03415526-ea39-49ab-8efc-24c96ac089c4.mp4
 
 # Tech stack used
 - HTML: It is the basic structure of the app.
