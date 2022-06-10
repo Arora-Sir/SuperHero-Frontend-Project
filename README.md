@@ -1,4 +1,4 @@
-# SuperHero Hunter : FrontEnd Project (Coding Ninjas)
+# SuperHero Hunter : FrontEnd Project
 
 # Features Added
 This is a SuperHero Hunter project meant to search your favourite heros :D
