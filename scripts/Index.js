@@ -39,7 +39,7 @@ function heroSearchPlaceholderKeyUpRefresh () {
   //Search hero be name using superheroapi
   //Have to add api.php in case PHP applications needs to communicate with databases
   let searchHeroURL =
-    `https://superheroapi.com/api.php/4824088724386168/search/` +
+    `https://www.superheroapi.com/api.php/4824088724386168/search/` +
     heroSearchPlaceholder.value
 
   //Creating new XMLHttpRequest

@@ -6,7 +6,7 @@ var heroCounting = 1
 
 for (let thisHeroUniqueID of likedHeros) {
   var thisHeroUniqueURL =
-    `https://superheroapi.com/api.php/4824088724386168/ ` + thisHeroUniqueID
+    `https://www.superheroapi.com/api.php/4824088724386168/ ` + thisHeroUniqueID
 
   //Creating new XMLHttpRequest
   var xhr = new XMLHttpRequest()

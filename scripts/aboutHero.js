@@ -7,7 +7,7 @@ console.log('HeroUniqueID:', thisHeroUniqueID)
 
 //Getting Hero Unique URL from local storage
 var thisHeroUniqueURL =
-  `https://superheroapi.com/api.php/4824088724386168/` + thisHeroUniqueID
+  `https://www.superheroapi.com/api.php/4824088724386168/` + thisHeroUniqueID
 
 //It'll show results as soon as the ReadyState property of the XMLHttpRequest change
 xhr.onreadystatechange = function () {
