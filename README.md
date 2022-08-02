@@ -1,4 +1,4 @@
-# SuperHero Hunter : FrontEnd Project (Coding Ninjas)
+# SuperHero Hunter : FrontEnd Project
 
 # Features Added
 This is a SuperHero Hunter project meant to search your favourite heros :D
@@ -11,7 +11,7 @@ This is a SuperHero Hunter project meant to search your favourite heros :D
 
 # Important links
 - Hosting Link: https://arora-sir.github.io/SuperHero-Frontend-Project/
-- Explanation Link: https://user-images.githubusercontent.com/29508236/172479633-03415526-ea39-49ab-8efc-24c96ac089c4.mp4
+- Explanation Link: https://user-images.githubusercontent.com/29508236/172482218-1edf79b9-feb9-4a34-9436-75aec35b7102.mp4
 
 # Tech stack used
 - HTML: It is the basic structure of the app.
